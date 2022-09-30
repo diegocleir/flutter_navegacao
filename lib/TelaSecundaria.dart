@@ -22,7 +22,16 @@ class _TelaSecundariaState extends State<TelaSecundaria> {
         padding: EdgeInsets.all(32),
         child: Column(
           children: [
-            Text("Segunda tela! valor passado: ${widget.valor.toString()}"),
+            Text("Segunda tela!"),
+            ElevatedButton(
+              onPressed: (){
+                Navigator.pop(context, "/");
+              },
+              child: Text("Ir para a primeira tela"),
+              style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.all(15)
+              ),
+            )
           ],
         ),
       ),
